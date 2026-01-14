@@ -49,4 +49,15 @@ summary{
     border: 0px;
     background-color: white;
 }
+.chats{
+    max-width: 150px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: var(--background-color-chats);
+}
+.chats > h2{
+    background-color: var(--background-color-chat-selected);
+}
 
