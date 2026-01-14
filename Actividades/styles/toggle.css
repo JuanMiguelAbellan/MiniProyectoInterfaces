@@ -1,0 +1,59 @@
+:root{
+    --background-color-div: hsl(209, 39%, 62%);
+}
+.toggle {
+    background: var(--background-color-div);
+    width: 100px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 50px;
+    margin: 50px;
+    transition: all 300ms ease 0s;
+}
+
+label {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 5px;
+    background: #efff91;
+    display: flex;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 300ms ease 0s;
+    overflow: hidden;
+}
+
+input {
+    display: none;
+}
+.forma-luna{
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    position: relative;
+    border: 0px;
+    top: -75px;
+    left: 70px;
+    background-color:var(--background-color-div);
+}
+
+.fondo-oscuro{
+    width: 100px;
+    height: 50px;
+    padding: 5px;
+    position: relative;
+    top: -10px;
+    left: 10px;
+    border-radius: 50px;
+    background-color: black;
+}
+
+input:checked + label{
+    margin-left: 55px;
+    background: #47c;
+    overflow: visible;
+}
+input:checked + .fondo-oscuro{
+    background: #47c;
+}

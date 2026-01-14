@@ -1,0 +1,104 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner{
+    height: 5vh;
+    width: 5vh;
+    margin-top: 45vh;
+    border-radius: 50%;
+    overflow: visible;
+    background-color:aliceblue;
+    animation: rotar 5s linear infinite;
+}
+
+.pacman{
+    height: 2vh;
+    width: 2vh;
+    position: relative;
+    top: -2vh;
+    border-radius: 50%;
+    background-color: burlywood;
+}
+
+.ojo{
+    height: 2px;
+    width: 2px;
+    position: relative;
+    top: 3px;
+    left: 10px;
+    background-color: #000;
+}
+
+.boca {
+    width: 1.5vh;
+    height: 1.5vh;
+    position: relative;
+    top: -3.7vh;
+    left: 0.5vh;
+    background: #000;
+    
+    clip-path: polygon(100% 10%, 10% 50%, 100% 10%);
+    animation: comer 1300ms linear infinite;
+}
+
+.fantasma{
+    height: 1vh;
+    width: 1vh;
+    position: relative;
+    left: 3vh;
+    border-radius: 50%;
+    background-color:blue;
+}
+
+#f1{
+    top: -4.6vh;
+}
+#f1 .ojo{
+    top: 4px;
+    left: 6px;
+    background-color: white;
+}
+#f2{
+    top: -4.6vh;
+    left: 4.5vh;
+}
+#f2 .ojo{
+    top: 5px;
+    left: 6px;
+    background-color: white;
+}
+#f3{
+    top: -4vh;
+    left: 5.3vh;
+}
+#f3 .ojo{
+    top: 6px;
+    left: 6px;
+    background-color: white;
+}
+
+@keyframes rotar {
+    0% {
+        
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes comer {
+    0%{
+        clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+    }
+    50%{
+        clip-path: polygon(100% 20%, 40% 40%, 100% 10%);
+    }
+    100%{
+        clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+    }
+}
