@@ -9,6 +9,9 @@ nav > .menu_izq{
     flex-direction: row;
     justify-content: left;
 }
+summary{
+    list-style: none;
+}
 .menu_izq > *{
     margin: 10px;
 }
@@ -16,20 +19,18 @@ nav > .menu_drc{
     display: flex;
     flex-direction: row;
     justify-content: right;
-    margin-left: calc(100vw - 370px);
+    margin-left: calc(100vw - 230px);
 }
 .menu_drc > *{
     margin: 10px;
 }
-summary{
+.ajustes{
     list-style: none;
-    width: 150px;
+    width: var(--img-height-menu);
+    text-align: right;
 }
 .menu_ajustes{
     width: var(--img-height-menu);
-}
-.ajustes{
-    text-align: right;
 }
 .img_nav{
     height: var(--img-height-menu);
@@ -42,22 +43,158 @@ summary{
 #logo{
     height: var(--logo-height-menu);
     width: auto;
-    margin-top: 1.8vh;
+    margin-top: 0.7vh;
 }
 .modo{
+    height: var(--logo-height-menu);
     margin-right: -120px;
     border: 0px;
     background-color: white;
 }
+.luna{
+    height: var(--logo-height-menu);
+}
 .chats{
-    max-width: 150px;
+    height: 91.7vh;
+    margin-top: 30px;
+    max-width: 12vw;
+    margin-left: -0.1vw;
     text-align: center;
+    justify-content: center;
+    align-items: start;
+    align-content: start;
+    background-color: var(--background-color-chats);
+    border-radius: 25px;
+}
+.chats > h2{
+    margin-top: -10px;
+    margin-bottom: 0px;
+    background-color: var(--background-color-chat-selected);
+    border-top-right-radius: 25px;
+}
+.chats > div{
+    height: 3vh;
+    width: 148px;
     justify-content: center;
     align-items: center;
     align-content: center;
-    background-color: var(--background-color-chats);
+    border: 1px var(--background-color-chat-selected) solid;
+    border-collapse:collapse;
 }
-.chats > h2{
-    background-color: var(--background-color-chat-selected);
+main{
+    height: 91.7vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+.conversacion{
+    height: 93vh;
+    width: 90vw;
+    margin-top: 20px;
+    margin-left: 1vw;
+    margin-right: -0.2vw;
+    align-content: end;
+    background-color: var(--background-color-menu);
+    border-radius: 25px;
+}
+
+.conversacion > input{
+    height: 35px;
+    width: 90%;
+    margin-left: 7%;
+    margin-bottom: 5px;
+    background-color: rgb(179, 179, 179);
+    border-radius: 25px;
+    border: 0px;
+}
+
+.emoji{
+    width: var(--img-height-menu);
+    margin-bottom: -30px;
+    margin-left: 1%;
+}
+.emojis{
+    width: inherit;
+}
+
+.emojis > img{
+    height: var(--img-height-menu);
+    width: auto;
+}
+
+.emoji > img{
+    height: var(--img-height-menu-sub2);
+    width: auto;
+}
+
+.teclado{
+    width: var(--img-height-menu);
+    margin-bottom: -30px;
+    margin-left: 3%;
+}
+.teclados{
+    width: inherit;
+}
+
+.teclados > img{
+    height: var(--img-height-menu);
+    width: auto;
+}
+
+.teclado > img{
+    height: var(--img-height-menu-sub2);
+    width: auto;
+}
+
+.adjuntar{
+    width: var(--img-height-menu);
+    margin-bottom: -35px;
+    margin-left: 5%;
+}
+.archivos{
+    width: inherit;
+}
+
+.archivos > img{
+    height: var(--img-height-menu);
+    width: auto;
+}
+
+.adjuntar > img{
+    height: var(--img-height-menu-sub2);
+    width: auto;
+}
+
+.microfono{
+    height: var(--img-height-menu);
+    width: auto;
+    margin-bottom: -5px;
+    margin-left: 5px;
+}
+
+.mensaje_usuario{
+    max-width: 50vw;
+    margin-left: 62vw;
+    margin-right: 1vw;
+    min-width: 1vw;
+    border-radius: 25px;
+    border-bottom-right-radius: 0;
+    background-color: var(--background-color-text-user);
+    text-align: start;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+.mensaje_ia{
+    max-width: 90vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    min-width: 1vw;
+    border-radius: 25px;
+    border-bottom-left-radius: 0;
+    background-color: var(--background-color-text-ia);
+    text-align: start;
+    padding: 5px;
+    padding-left: 10px;
 }
 
