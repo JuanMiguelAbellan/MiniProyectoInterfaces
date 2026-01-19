@@ -75,6 +75,7 @@ nav > .menu_drc{
 .chats > div{
     height: 3vh;
     width: 148px;
+    min-height: 28px;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -91,6 +92,7 @@ main{
     height: 93vh;
     width: 90vw;
     margin-top: 20px;
+    font-family: var(--family-font-conversacion);
     margin-left: 1vw;
     align-content: end;
     background-color: var(--background-color-menu);
@@ -99,7 +101,7 @@ main{
 
 .conversacion > input{
     height: 35px;
-    width: 89%;
+    width: 87%;
     margin-left: 7%;
     margin-bottom: 5px;
     background-color: rgb(179, 179, 179);
@@ -201,4 +203,81 @@ main{
     padding: 5px;
     padding-left: 10px;
 }
+.mensaje_ia_wait{
+    max-width: 5vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    min-width: 1vw;
+    font-size: xx-large;
+    border-radius: 25px;
+    border-bottom-left-radius: 0;
+    text-align: start;
+    padding: 5px;
+    padding-left: 10px;
+    transform:translate(-50%,-50%)
+}
 
+.enviar, .enviar_imagen{
+    height: var(--img-height-menu);
+    width: auto;
+    border: 0;
+    margin-bottom: -5px;
+    background-color: var(--background-color-menu);
+}
+
+.mensaje_ia_wait:before
+{
+  position:absolute;
+  top:-3px;
+  left:-3px;
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  animation:animateC 2s linear infinite;
+}
+span
+{
+  display:block;
+  position:absolute;
+  top:0px;
+  left:100px;
+  width:15px;
+  height:15px;
+  background:transparent;
+  transform-origin:left;
+  animation:animate 2s linear infinite;
+}
+span:before
+{
+  content:'';
+  position:absolute;
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  background:var(--background-color-text-ia);
+  top:-6px;
+  right:-8px;
+  box-shadow:0 0 20px var(--background-color-menu);
+}
+@keyframes animateC
+{
+  0%
+  {
+    transform:rotate(0deg);
+  }
+  100%
+  {
+    transform:rotate(360deg);
+  }
+}
+@keyframes animate
+{
+  0%
+  {
+    transform:rotate(45deg);
+  }
+  100%
+  {
+    transform:rotate(405deg);
+  }
+}

@@ -9,6 +9,7 @@
     --background-color-text-ia-doc: hsla(197, 52%, 38%, 100%);
     --background-color-menu: hsla(180, 44%, 89%, 75%);
     --color-text: hsla(0, 0, 0, 100%);
+    --family-font-conversacion: Verdana, Geneva, Tahoma, sans-serif; 
     --font-size-chat: 16px;
     --font-size-menu: 14px;
     --img-height-menu: 25px;
