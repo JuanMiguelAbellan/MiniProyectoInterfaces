@@ -8,12 +8,14 @@ function listeners(){
         let text = input.value
         crearMensaje("mensaje_usuario", text)
         crearMensaje("mensaje_ia_wait")
+        getRespuesta(text)
     })
 
     input.addEventListener("keydown", function(e){
         if(e.key === "Enter"){
             let text = input.value
             crearMensaje("mensaje_usuario", text)
+            crearMensaje("mensaje_ia_wait")
             getRespuesta(text)
         }
     })
@@ -40,19 +42,22 @@ function crearMensaje(clase, contenido){
 
 function getRespuesta(pregunta){
     const URL = "http://localhost:8080/api"
-    const options = {
-        "Method": "get",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXBpdG81LnBlcGUuQGdtYWlsLmNvbSIsImlhdCI6MTc2ODgyODY4NiwiZXhwIjoxNzY4ODMyMjg2fQ.4Oe6OQfonkzOx7xdd5vtlDCu108d3bfwcpVyJYWXA8A",
-        "Content-Type": "application/json"
-    }
-    fetch(URL+"/tareas", options)
+    const myHeaders = new Headers();
+    myHeaders.append("Authorization", "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXBpdG81LnBlcGUuQGdtYWlsLmNvbSIsImlhdCI6MTc2ODkxMDEzMywiZXhwIjoxNzY4OTEzNzMzfQ.4K2qSyQSqxseI5mCzX29euEx_dZMY1FAEiwZmCxxhHc");
+
+    const requestOptions = {
+        method: "GET",
+        headers: myHeaders
+    };
+    fetch(URL+"/tareas/6", requestOptions)
     .then(response => {
         if(response.ok){
             return response.json()
         }else{
+            console.log(response);
             throw new Error(response.statusText)
         }
     })
-    .then(data => crearMensaje("mensaje_ia" , data))
+    .then(data => crearMensaje("mensaje_ia" , data.texto))
     .catch(error => console.log(error))
 }
