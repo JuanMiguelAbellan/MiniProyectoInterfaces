@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", listeners)
 
 function listeners(){
-    button = document.querySelector(".enviar")
-    input = document.querySelector("#campo")
+    let button = document.querySelector(".enviar")
+    let input = document.querySelector("#campo")
     
     button.addEventListener("click", function(e){
         let text = input.value
@@ -22,42 +22,53 @@ function listeners(){
 }
 
 function crearMensaje(clase, contenido){
-    console.log(contenido);
+    let input = document.querySelector("#campo")
     
     if(clase === "mensaje_ia_wait"){
-        mensaje = document.createElement("p")
-        span = document.createElement("span")
+        let mensaje = document.createElement("p")
         mensaje.setAttribute("class", clase)
         mensaje.append(document.createElement("span"))
-        document.querySelector(".emoji").before(mensaje)
+        document.querySelector(".mensajes").appendChild(mensaje)
         input.value = ""
-    }else{
-        mensaje = document.createElement("p")
+    }else if(clase === "mensaje_ia"){
+        let mensaje = document.createElement("p")
+        document.querySelector(".mensaje_ia_wait").remove()
         mensaje.textContent = contenido
         mensaje.setAttribute("class", clase)
-        document.querySelector(".emoji").before(mensaje)
+        document.querySelector(".mensajes").appendChild(mensaje)
+        input.value = ""
+    }else{
+        let mensaje = document.createElement("p")
+        mensaje.textContent = contenido
+        mensaje.setAttribute("class", clase)
+        document.querySelector(".mensajes").appendChild(mensaje)
         input.value = ""
     }
 }
 
 function getRespuesta(pregunta){
-    const URL = "http://localhost:8080/api"
+    const URL = "http://localhost:4000/api/ai/generate"
     const myHeaders = new Headers();
-    myHeaders.append("Authorization", "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXBpdG81LnBlcGUuQGdtYWlsLmNvbSIsImlhdCI6MTc2ODkxMDEzMywiZXhwIjoxNzY4OTEzNzMzfQ.4K2qSyQSqxseI5mCzX29euEx_dZMY1FAEiwZmCxxhHc");
-
-    const requestOptions = {
-        method: "GET",
-        headers: myHeaders
+    const json = {
+        "prompt": pregunta
     };
-    fetch(URL+"/tareas/6", requestOptions)
+    myHeaders.append(
+        "Content-Type", "application/json"
+    )
+    const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        redirect: 'follow',
+        body: JSON.stringify(json)
+    };
+    fetch(URL, requestOptions)
     .then(response => {
         if(response.ok){
             return response.json()
         }else{
-            console.log(response);
             throw new Error(response.statusText)
         }
     })
-    .then(data => crearMensaje("mensaje_ia" , data.texto))
+    .then(data => crearMensaje("mensaje_ia", data.response))
     .catch(error => console.log(error))
 }
