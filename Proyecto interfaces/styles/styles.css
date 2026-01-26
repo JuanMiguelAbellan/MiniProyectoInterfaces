@@ -316,9 +316,7 @@ span:before{
     }
 
     .chats{
-        width: 100%;
-        height: auto;
-        border-radius: 0;
+        display: none;
     }
 
     .conversacion{
