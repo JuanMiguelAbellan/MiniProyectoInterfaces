@@ -7,23 +7,23 @@
     <link rel="stylesheet" href="../styles/root.css">
     <link rel="stylesheet" href="../styles/styles.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <link rel="icon" href="../styles/images/favicon.svg" type="image/svg+xml">
-    <script type="module" src="./script.js"></script>
+    <link rel="icon" href="../styles/images/logo.svg" type="image/svg+xml">
+    <script type="module" src="../scripts/script.js"></script>
     <title>IA-Docs</title>
 <body>
 
     <header>
         <nav>
             <div class="menu_izq">
-                <a href="landing.html"><img src="../styles/images/iadocs_logo.svg" alt="Logotipo de la empresa" class="img_nav" id="logo"></a>
+                <a href="landing.html"><img src="../styles/images/logo.svg" alt="Logotipo de la empresa" class="img_nav" id="logo"  title="Logotipo de empresa que lleva a la pagina principal"></a>
                 <details class="menu_hamburguesa">
-                    <summary><img src="../styles/images/menu-hamburguesa.svg" alt="icono de hamburguesa" class="img_nav"></summary>
+                    <summary title="Menú desplegable"><img src="../styles/images/menu-hamburguesa.svg" alt="icono de hamburguesa" class="img_nav" ></summary>
                     <div class="dropdown">
-                        <p><img src="../styles/images/hogar.svg" alt="icono de casita" class="img_menu"> Inicio</p>
-                        <p><img src="../styles/images/llamada-telefonica.svg" alt="icono de llamada" class="img_menu"> Realizar llamada</p>
+                        <p title="Enlace a la pagina principal"><img src="../styles/images/hogar.svg" alt="icono de casita" class="img_menu" > Inicio</p>
+                        <p title="Enlace a la funcion de llamada (en proceso)"><img src="../styles/images/llamada-telefonica.svg" alt="icono de llamada" class="img_menu" > Realizar llamada</p>
                         <details>
-                            <summary><img src="../styles/images/chats.svg" alt="icono de chats" class="img_menu" > Tus chats <img src="../styles/images/angulo-pequeno-hacia-abajo.svg" alt="icono de desplegable" class="img_menu"> </summary>
-                            <div class="dropdown">
+                            <summary title="Menú desplegable de tus chats"><img src="../styles/images/chats.svg" alt="icono de chats" class="img_menu" > Tus chats <img src="../styles/images/angulo-pequeno-hacia-abajo.svg" alt="icono de desplegable" class="img_menu"> </summary>
+                            <div class="dropdown" title="Tus chats">
                                 <p>Chat 1</p>
                                 <p>Chat 2</p>
                                 <p>Chat 3</p>
@@ -34,19 +34,19 @@
                 </details>
             </div>
             <div class="menu_drc">
-                <a href="" class="luna"><img src="../styles/images/accesibilidad.svg" class="img_nav"></a>
-                <button class="modo"><img src="../styles/images/luna.svg" class="img_nav" id="luna"> </button>
-                <details class="menu_ajustes">
-                    <summary class="ajustes"><img src="../styles/images/ajustes.svg" alt="icono de ajustes" class="img_nav"></summary>
+                <a href="" class="luna" title="Icono de accesibilidad, enlace a la pagina de accesibilidad"><img src="../styles/images/accesibilidad.svg" class="img_nav"></a>
+                <button class="modo" id="modo" title="Boton para cambiar el tema claro/oscuro"><img src="../styles/images/luna.svg" class="img_nav" id="luna"> </button>
+                <details class="menu_ajustes" title="Menú desplegable de ajustes">
+                    <summary class="ajustes" title="Enlace a la pagina de ajustes"><img src="../styles/images/ajustes.svg" alt="icono de ajustes" class="img_nav"></summary>
                     <div class="dropdown">
                         <p>Cerrar_sesion</p>
                         <p>Subsripcion</p>
                         <details>
-                            <summary><img src="../styles/images/chats.svg" alt="icono de chats" class="img_menu" > Preferencias <img src="../styles/images/angulo-pequeno-hacia-abajo.svg" alt="icono de desplegable" class="img_menu"> </summary>
-                            <p>Chat 1</p>
-                            <p>Chat 2</p>
-                            <p>Chat 3</p>
-                            <p>Chat 4</p>
+                            <summary title="Menú desplegable a enlaces para editar las Preferencias de usuario"><img src="../styles/images/chats.svg" alt="icono de chats" class="img_menu" > Preferencias <img src="../styles/images/angulo-pequeno-hacia-abajo.svg" alt="icono de desplegable" class="img_menu"> </summary>
+                            <p>Texto</p>
+                            <p>Colores</p>
+                            <p>Tamaño</p>
+                            <p>Información personal</p>
                         </details>
                     </div>
                 </details>
@@ -54,7 +54,7 @@
         </nav>
     </header>
     <main>
-        <aside class="chats">
+        <aside class="chats" title="Contenedor con los chats">
             <h2>Chats</h2>
             <div>Chat 1</div>
             <div>Chat 2</div>
@@ -62,19 +62,19 @@
             <div>Chat 4</div>
         </aside>
 
-        <section class="conversacion">
+        <section class="conversacion" title="Contenedor principal">
             <div class="mensajes">
             </div>
 
             <div class="barra_inferior">
-                <details class="emoji">
+                <details class="emoji" title="Menú desplegable para la inserccion de emojis">
                     <summary><img src="../styles/images/emojis.svg"></summary>
                     <div class="dropdown">
                         <img src="../styles/images/hogar.svg">
                         <img src="../styles/images/llamada-telefonica.svg">
                     </div>
                 </details>
-                <details class="teclado">
+                <details class="teclado" title="Menú desplegable para opciones de teclado">
                     <summary class="teclados"><img src="../styles/images/teclado.svg" alt=""></summary>
                     <div class="dropdown">
                         <img src="../styles/images/hogar.svg">
@@ -82,7 +82,7 @@
                         <img src="../styles/images/llamada-telefonica.svg">
                     </div>
                 </details>
-                <details class="adjuntar">
+                <details class="adjuntar" title="Menú desplegable para adjuntar archivos">
                     <summary class="archivos"><img src="../styles/images/adjuntar.svg" alt=""></summary>
                     <div class="dropdown">
                         <img src="../styles/images/hogar.svg">
@@ -91,11 +91,11 @@
                 </details>
                 <input type="text" class="input_text" id="campo">
 
-                <button class="enviar">
+                <button class="enviar" title="Boton para enviar el texto escrito">
                     <img class="enviar_imagen" src="../styles/images/enviar.svg">
                 </button>
 
-                <img src="../styles/images/microfono-circular-apagado.svg" class="microfono">
+                <img src="../styles/images/microfono-circular-apagado.svg" class="microfono" title="Boton para activar el microfono">
             </div>
         </section>
     </main>

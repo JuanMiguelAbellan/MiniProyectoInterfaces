@@ -8,7 +8,7 @@ function listeners(){
         let text = input.value
         crearMensaje("mensaje_usuario", text)
         crearMensaje("mensaje_ia_wait")
-        getRespuesta(text)
+        setTimeout(()=>{getRespuesta(text)}, 5000)
     })
 
     input.addEventListener("keydown", function(e){
@@ -16,9 +16,39 @@ function listeners(){
             let text = input.value
             crearMensaje("mensaje_usuario", text)
             crearMensaje("mensaje_ia_wait")
-            getRespuesta(text)
+            setTimeout(()=>{getRespuesta(text)}, 5000)
         }
     })
+
+    let btnModo = document.querySelector("#modo");
+    let body = document.body;
+    let nav = document.querySelector("nav")
+    let chats= document.querySelector(".chats")
+    let conversacion = document.querySelector(".conversacion")
+
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.setAttribute("class", "oscuro")
+    }
+
+    btnModo.addEventListener('click', () => {
+        if (localStorage.getItem('dark-mode') == 'enable') {
+            body.setAttribute("class", "oscuro")
+            nav.setAttribute("class", "oscuro")
+            chats.setAttribute("class", "chats-oscuro")
+            conversacion.setAttribute("class", "conversacion-oscuro")
+            localStorage.setItem('dark-mode', 'disabled')
+        } else {
+            localStorage.setItem('dark-mode', 'enable');
+            body.setAttribute("class", "claro")
+            nav.setAttribute("class", "claro")
+            chats.setAttribute("class", "chats")
+            conversacion.setAttribute("class", "conversacion")
+        }
+        });
+}
+
+function cmabiarModo(){
+
 }
 
 function crearMensaje(clase, contenido){
@@ -47,28 +77,29 @@ function crearMensaje(clase, contenido){
 }
 
 function getRespuesta(pregunta){
-    const URL = "http://localhost:4000/api/ai/generate"
-    const myHeaders = new Headers();
-    const json = {
-        "prompt": pregunta
-    };
-    myHeaders.append(
-        "Content-Type", "application/json"
-    )
-    const requestOptions = {
-        method: "POST",
-        headers: myHeaders,
-        redirect: 'follow',
-        body: JSON.stringify(json)
-    };
-    fetch(URL, requestOptions)
-    .then(response => {
-        if(response.ok){
-            return response.json()
-        }else{
-            throw new Error(response.statusText)
-        }
-    })
-    .then(data => crearMensaje("mensaje_ia", data.response))
-    .catch(error => console.log(error))
+    return crearMensaje("mensaje_ia", "Hola bienvenido a IaDocs")
+    // const URL = "http://localhost:4000/api/ai/generate"
+    // const myHeaders = new Headers();
+    // const json = {
+    //     "prompt": pregunta
+    // };
+    // myHeaders.append(
+    //     "Content-Type", "application/json"
+    // )
+    // const requestOptions = {
+    //     method: "POST",
+    //     headers: myHeaders,
+    //     redirect: 'follow',
+    //     body: JSON.stringify(json)
+    // };
+    // fetch(URL, requestOptions)
+    // .then(response => {
+    //     if(response.ok){
+    //         return response.json()
+    //     }else{
+    //         throw new Error(response.statusText)
+    //     }
+    // })
+    // .then(data => crearMensaje("mensaje_ia", data.response))
+    // .catch(error => console.log(error))
 }

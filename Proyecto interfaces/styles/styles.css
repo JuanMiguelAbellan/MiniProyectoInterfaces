@@ -5,7 +5,15 @@ html, body{
     padding: 0;
     overflow-x: hidden;
     font-family: var(--family-font-conversacion);
-    background-color: var(--background-color-body);
+    background-color: var(--background-color-text-ia-doc);
+}
+
+.oscuro{
+    background-color: var(--background-color-oscuro);
+}
+
+.claro{
+    background-color: var(--background-color-text-ia-doc);
 }
 
 img{
@@ -30,7 +38,7 @@ nav{
     border: 1px solid var(--background-color-chat-selected);
     border-bottom: 0;
     border-bottom-left-radius: 25px;
-    background-color: var(--background-color-body);
+    background-color: var(--background-color-text-ia-doc);
 }
 
 nav > .menu_izq{
@@ -107,14 +115,14 @@ nav > .menu_drc{
 }
 
 #logo{
-    height: var(--logo-height-menu);
+    height: calc(var( --logo-height-menu)*2);
     margin-top: 0.5vh;
 }
 
 .modo{
     height: var(--logo-height-menu);
     border: 0;
-    background-color: var(--background-color-body);
+    background-color: var(--background-color-text-ia-doc);
 }
 
 .luna{
@@ -136,6 +144,14 @@ main{
     border-radius: 20px; 
     overflow-y: auto; 
 }
+.chats-oscuro{
+    width: 15%; 
+    min-width: 180px; 
+    height: 100%;
+    background-color: var(--background-color-chats-oscuro); 
+    border-radius: 20px; 
+    overflow-y: auto;   
+}
 
 .chats > h2{
     margin: 0;
@@ -154,11 +170,43 @@ main{
     border: 1px var(--background-color-chat-selected) solid;
     border-radius: 10px;
 }
+.chats-oscuro > h2{
+    margin: 0;
+    padding: 0.5rem;
+    background-color: var(--background-color-text-ia-doc);
+    border-top-right-radius: 20px;
+}
+
+.chats-oscuro > div{
+    height: 2.5rem;
+    width: 80%;
+    margin: 0.5rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px var(--background-color-chat-selected) solid;
+    border-radius: 10px;
+}
+
 .conversacion{ 
     flex: 1; 
     height: 100%; 
     margin-left: 1%; 
     background-color: var(--background-color-menu);
+    border: 1px, solid, var(--background-color-chat-selected);
+    border-radius: 25px;
+    border-top-right-radius: 0;
+    display: flex; 
+    flex-direction: column; 
+    overflow: visible; 
+    position: sticky;
+}
+
+.conversacion-oscuro{ 
+    flex: 1; 
+    height: 100%; 
+    margin-left: 1%; 
+    background-color: var(--background-color-menu-oscuro);
     border: 1px, solid, var(--background-color-chat-selected);
     border-radius: 25px;
     border-top-right-radius: 0;
