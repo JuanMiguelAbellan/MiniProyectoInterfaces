@@ -1,0 +1,118 @@
+@media (orientation: landscape){
+    body{
+    background-color: var(--background-color);
+    color: var(--color-texto);
+}
+
+.boxLogo{
+    height: 1vh;
+}
+
+nav{
+    height: 3.5vh;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--background-color-nav);
+}
+nav a{
+    margin: 1vw;
+    margin-top: var(--margin-top);
+    font-size: 2vh;
+    color: var(--color-texto-a);
+    text-decoration: none;
+}
+nav a:hover{
+    color: var(--color-texto-a-hover);
+}
+
+.banner{
+    height: 5vh;
+    width: 98vw;
+    margin-top: var(--margin-top);
+    position: relative;
+    border: 1px solid var(--border-color);
+}
+
+.content{
+    display: flex;
+}
+
+aside{
+    height: 95vh;
+    width: 18vw;
+    margin-top: var(--margin-top);
+    display: flex;
+    font-size:medium;
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color-aside);
+}
+aside ul{
+    height: 14vh;
+    width: 16vw;
+    margin-left: -2vw;
+    position: relative;
+    list-style-type:none;
+}
+aside li{
+    width: 14vw;
+    margin-top: var(--margin-top);
+}
+
+section{
+    height: 95.3vh;
+    width: 80;
+    margin-left: 1.9vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--background-color-sections);
+}
+
+article{
+    height: 25vh;
+    width: 60vw;
+    position: relative;
+    margin-top: 5vh;
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+.art1{
+    position: relative;
+    margin-top: 10vh;
+}
+.art2{
+    position: relative;
+    margin-top: -3vh;
+}
+.art3{
+    position: relative;
+    margin-top: -3vh;
+}
+
+
+footer{
+    height: 5vh;
+    border-radius: 25px;
+    margin-top: 1.5vh;
+    font-size: 2vh;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--background-color-nav);
+}
+footer a{
+    margin-top: 1vh;
+}
+footer *{
+    margin-top: -0.5vh;
+    font-size: 1.5vh;
+    color: var(--color-texto-a);
+    text-decoration: none;
+}
+footer a:hover{
+    color: var(--color-texto-a-hover);
+}   
+}

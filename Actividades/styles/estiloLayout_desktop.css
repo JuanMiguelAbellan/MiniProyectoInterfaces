@@ -1,0 +1,101 @@
+body{
+    background-color: var(--background-color);
+    color: var(--color-texto);
+}
+
+.boxLogo{
+    height: 1vh;
+}
+
+nav{
+    height: 3.5vh;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--background-color-nav);
+}
+nav a{
+    margin: 2vw;
+    margin-top: var(--margin-top);
+    font-size: 2vh;
+    color: var(--color-texto-a);
+    text-decoration: none;
+}
+nav a:hover{
+    color: var(--color-texto-a-hover);
+}
+
+.banner{
+    height: 5vh;
+    width: 99vw;
+    margin-top: var(--margin-top);
+    position: relative;
+    border: 1px solid var(--border-color);
+}
+
+.content{
+    display: flex;
+}
+
+aside{
+    height: 15.5vh;
+    width: 10vw;
+    margin-top: var(--margin-top);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color-aside);
+}
+aside ul{
+    height: 14vh;
+    width: 9vw;
+    margin-left: -0.5vw;
+    position: relative;
+    list-style-type:none;
+}
+aside li{
+    margin-top: var(--margin-top);
+}
+
+section{
+    height: 70vh;
+    width: 88.5vw;
+    margin-top: var(--margin-top);
+    margin-left: 0.5vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--background-color-sections);
+}
+
+article{
+    height: 30vh;
+    width: 30vw;
+    min-width: 10vw;
+    margin: 10%;
+    margin-top: 10vh;
+    padding: auto;
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+footer{
+    height: 3vh;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--background-color-nav);
+}
+footer *{
+    margin: 2vw;
+    margin-top: var(--margin-top);
+    font-size: 1.5vh;
+    color: var(--color-texto-a);
+    text-decoration: none;
+}
+footer a:hover{
+    color: var(--color-texto-a-hover);
+}

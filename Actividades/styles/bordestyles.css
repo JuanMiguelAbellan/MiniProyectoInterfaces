@@ -1,0 +1,97 @@
+body{
+    text-align: center;
+    position: relative;
+}
+.seccion1{
+    background-color: grey;
+    width: 90vh;
+    height: 35vh;
+    margin: auto;
+    padding: 5vh;
+}
+.caja1{
+    margin: auto;
+    padding: auto;
+    align-content: center;
+    width: 20vh;
+    height: 10vh;
+    border: 1px solid black;
+    border-left: 1px dotted;
+    border-right: 1px dotted;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+.caja2{
+    margin: auto;
+    padding: auto;
+    align-content: center;
+    margin-top: 10px;
+    width: 20vh;
+    height: 10vh;
+    border-top: 1px solid seagreen;
+    border-left: 1px dotted blue;
+    border-right: 1px dotted rgb(143, 26, 26);
+    border-bottom: 1px solid rgb(238, 226, 67);
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.caja3{
+    margin: auto;
+    padding: auto;
+    align-content: center;
+    margin-top: 10px;
+    width: 20vh;
+    height: 10vh;
+    border-top: 2px solid seagreen;
+    border-left: 4px dotted blue;
+    border-right: 6px dotted rgb(143, 26, 26);
+    border-bottom: 8px solid rgb(238, 226, 67);
+    font-family: fantasy;
+}
+
+.seccion2{
+    position: relative;
+    background-color: rgb(110, 104, 104);
+    width: 90vh;
+    height: 35vh;
+    margin: auto;
+    margin-top: 5px;
+    padding: 5vh;
+}
+
+.caja4{
+    position: relative;
+    margin: auto;
+    padding: auto;
+    margin-top: 5vh;
+    width: 20vh;
+    height: 10vh;
+    border:1px solid black;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.titulo{
+    position: relative;
+    color: white;
+    text-align: center;
+    background-color: rgb(61, 60, 60);
+    width: 5vh;
+    top: -2.5vh;
+    left: 0.5vh;
+}
+
+.caja5{
+    position: relative;
+    margin: auto;
+    padding: auto;
+    margin-top: 5vh;
+    width: 18vh;
+    height: 10vh;
+    border:1px solid black;
+    text-align: center;
+}
+
+.leyenda{
+    background-color: rgb(61, 60, 60);
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+}

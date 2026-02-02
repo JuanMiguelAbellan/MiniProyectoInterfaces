@@ -1,0 +1,16 @@
+:root{
+    --background-color: hsl(257, 57%, 76%);
+    --background-color-sections: hsl(283, 29%, 51%);
+    --background-color-aside: hsl(155, 57%, 72%);
+    --background-color-nav: hsl(125, 70%, 73%);
+    --color-texto: black;
+    --color-texto-a: hsl(283, 38%, 28%);
+    --color-texto-a-hover: hsl(283, 100%, 69%);
+    --border-color: hsl(170, 84%, 73%);
+    --margin-top: 0.5vh;
+
+    --background-color-print: hsl(0, 0%, 100%);
+    --background-color-sections-print: hsl(0, 0%, 84%);
+    --background-color-aside-print: hsl(0, 0%, 71%);
+    --background-color-nav-print: hsl(0, 0%, 94%);
+}

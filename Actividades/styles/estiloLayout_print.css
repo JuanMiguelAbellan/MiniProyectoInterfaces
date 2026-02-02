@@ -1,0 +1,81 @@
+@media print {
+.boxLogo{
+    height: 1.5cm;
+}
+
+nav{
+    height: 3cm;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: -1cm;
+    margin-bottom: -2cm;
+}
+nav a{
+    margin: 0.5cm;
+    font-size: small;
+    color: black;
+    text-decoration: none;
+}
+
+.banner{
+    visibility: hidden;
+}
+
+.content{
+    display: flex;
+}
+
+aside{
+    height: 22cm;
+    width: 5cm;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+aside ul{
+    height: 14cm;
+    width: 4cm;
+    margin-left: -0.5vw;
+    position: relative;
+    list-style-type:none;
+}
+aside li{
+    margin-top: var(--margin-top);
+}
+
+section{
+    height: 20cm;
+    width: 15cm;
+    padding: 1cm;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--background-color-sections-print);
+}
+
+article{
+    height: 10cm;
+    width: 3cm;
+    margin: 0.5cm;
+    text-align: center;
+    background-color: var(--background-color-print);
+}
+
+footer{
+    height: 3cm;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+footer *{
+    margin: 0.5cm;
+    font-size: small;
+    color: black;
+    text-decoration: none;
+}
+}

@@ -1,0 +1,117 @@
+body{
+    justify-items: center;
+    margin-top: 40vh;
+}
+.contenedor{
+    display: grid;
+    grid-template-columns: 4;
+    grid-template-rows: 2;
+    grid-template: 2/4;
+    height: 30vh;
+    width: 50vw;
+    text-align: center;
+}
+.item1{
+    color: hsl(316, 26%, 21%);
+    grid-row-start: 1;
+    grid-row-end: 3;
+    align-content: center;
+    background-color: hsl(112, 60%, 74%);
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.item2{
+    color: hsl(316, 26%, 21%);
+    grid-column-start: 2;
+    align-content: center;
+    background-color: hsl(124, 64%, 91%);
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.item3{
+    color: hsl(316, 26%, 21%);
+    grid-column-start: 3;
+    align-content: center;
+    background-color: hsl(163, 21%, 73%);
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.item4{
+    color: hsl(124, 64%, 91%);
+    grid-column-start: 4;
+    align-content: center;
+    background-color: hsl(307, 13%, 39%);
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.item5{
+    color: hsl(124, 64%, 91%);
+    grid-column-start: 2;
+    grid-column-end: 5;
+    align-content: center;
+    background-color: hsl(316, 26%, 21%);
+    height: 109%;
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    justify-items: center;
+}
+.contenedor2{
+    display: grid;
+    grid-template: 2/3;
+    height: 1fr;
+    width: 30vw;
+    margin-top: 5vh;
+}
+.item6{
+    height: 1fr;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2 ;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-bottom: -17px;
+    background-color: hsl(245, 44%, 90%);
+    color: hsl(316, 26%, 21%);
+    align-content: center;
+}
+.item7{
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: hsl(25, 26%, 75%);
+    color: hsl(316, 26%, 21%);
+    align-content: center;
+}
+.item8{
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: hsl(9, 8%, 64%);
+    color: hsl(316, 26%, 21%);
+    align-content: center;
+}
+.item9{
+    height: 100%;
+    width: 100%;
+    grid-row-start: 2;
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: hsl(258, 20%, 40%);
+    color: hsl(245, 44%, 90%);
+    align-content: center;
+}

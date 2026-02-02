@@ -1,0 +1,27 @@
+*{
+    background-color: coral;
+}
+nav{
+    position: absolute;
+    height: 50px;
+    width: 500px;
+    text-align: center;
+    align-content: center;
+    background-color: rgb(192, 27, 27);
+    border-radius: 15px;
+    left: 35%;
+    padding: 5px;
+}
+nav a{
+    padding: 5px;
+    text-decoration: none;
+    color: rgb(247, 236, 82);
+    background-color: rgb(192, 27, 27);
+}
+#motos{
+    position: relative;
+    height: 200px;
+    width: 90%;
+    margin: auto;
+    background-color: rgb(164, 236, 97);
+}

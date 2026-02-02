@@ -1,0 +1,189 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.carta{
+    height: 50vh;
+    width: 20vw;
+    max-height: 100vh;
+    max-width: 40vw;
+    margin: 2vh;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid hsl(316, 26%, 28%);
+    border-right: 10px solid hsl(316, 26%, 28%);
+    border-bottom: 12px solid hsl(316, 26%, 28%);
+    border-radius: 20px;
+    background-color: hsl(277, 9%, 48%);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+img{
+    height: auto;
+    width: 40%;
+    max-width: 60%;
+    min-width: 20%;
+    border-radius: 25px;
+    box-shadow: 1px 1px 6px 0 rgb(51, 49, 49);
+}
+
+.nombre{
+    height: 5vh;
+    width: 19vw;
+    align-content: center;
+    background-color: hsl(209, 68%, 84%);
+    border-radius: 25px;
+    box-shadow: 1px 1px 4px 0 rgb(88, 88, 88);
+}
+
+.profesion{
+    height: 3vh;
+    width: 19vw;
+    align-content: center;
+    font-size: larger;
+    background-color: hsl(170, 68%, 84%);
+    border-radius: 25px;
+    box-shadow: 1px 1px 4px 0 rgb(88, 88, 88);
+}
+
+.descripcion{
+    height: 42vh;
+    width: 19vw;
+    margin-top: -1vh;
+    margin-bottom: 10px;
+    text-align: start;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: hsl(124, 72%, 82%);
+    box-shadow: 1px 1px 4px 0 rgb(88, 88, 88);
+}
+
+.descripcion hr{
+    height: 1px;
+    width: 19vw;
+    background-color: hsl(277, 9%, 48%);
+    border: 1px solid hsl(277, 9%, 48%);
+    border-radius: 20px;
+}
+
+.frase{
+    text-align: center;
+    color: hsl(198, 8%, 41%);
+    font-size:small;
+    font-style: italic;
+}
+
+.copy{
+    height: 1vh;
+    width: 7vw;
+    margin-left: -12vw;
+    margin-top: -1vh;
+    margin-bottom: -1px;
+    text-align: left;
+    font-size: xx-small;
+}
+
+.imagenBrillo{
+    filter: brightness(2);
+    transition: filter 2s;
+}
+.imagenBrillo:hover{
+    filter: none;
+}
+.imagenContraste{
+    filter: contrast(5);
+    transition: filter 2s;
+}
+.imagenContraste:hover{
+    filter: none;
+}
+.imagenSaturacion{
+    filter: saturate(5);
+    transition: filter 2s;
+}
+.imagenSaturacion:hover{
+    filter: none;
+}
+.imagenBlur{
+    filter: blur(2px);
+    transition: filter 2s;
+}
+.imagenBlur:hover{
+    filter: none;
+}
+.imagenRotacion{
+    filter: hue-rotate(100deg);
+    transition: filter 2s;
+}
+.imagenRotacion:hover{
+    filter: none;
+}
+.imagenInvertida{
+    filter: invert(1);
+    transition: filter 2s;
+}
+.imagenInvertida:hover{
+    filter: none;
+}
+.imagenGrises{
+    filter: grayscale(2);
+    transition: filter 2s;
+}
+.imagenGrises:hover{
+    filter: none;
+}
+.imagenSepia{
+    filter: sepia(2);
+    transition: filter 2s;
+}
+.imagenSepia:hover{
+    filter: none;
+}
+.imagenSombras{
+    filter: drop-shadow(6px 6px 4px rgba(0, 0, 0, 0.5));
+    transition: filter 2s;
+}
+.imagenSombras:hover{
+    filter: none;
+}
+.imagenRecortada{
+    clip-path: polygon(10% 5%, 100% 15%, 100% 60%, 30% 100%);
+    transition: filter 2s;
+}
+.imagenRecortada:hover{
+    clip-path: none;
+}
+.imagenCircular{
+    clip-path: circle(50%);
+    transition: filter 2s;
+}
+.imagenCircular:hover{
+    clip-path: none;
+}
+.imagenElipse{
+    clip-path: ellipse(50% 50%);
+    transition: filter 2s;
+}
+.imagenElipse:hover{
+    clip-path: none;
+}
+.imagenTrinagulo{
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transition: filter 2s;
+}
+.imagenTrinagulo:hover{
+    clip-path: none;
+}
+.imagenMedalla{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%);
+    transition: filter 2s;
+}
+.imagenMedalla:hover{
+    clip-path: none;
+}

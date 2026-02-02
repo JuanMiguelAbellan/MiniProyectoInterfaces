@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoria de Gestatl</title>
+     <link rel="stylesheet" href="estilos.css">
+      
+</head>
+<body>
+    <nav>
+        <a href="" target="_blank">Inicio</a>
+        <a href="" target="_blank">Sobre nosotros</a>
+        <a href="" target="_blank">Redes</a>
+    </nav>
+    <div class="contenedor">
+        <article class="articulo">
+            <h2 class="titulo">Titulo1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt varius rhoncus. Proin convallis, elit at pharetra consequat, sapien mauris egestas lacus, et eleifend diam nibh vitae ligula. Sed vulputate venenatis enim sed ultricies. Sed fringilla, purus ut fringilla efficitur, erat est mattis diam, et venenatis augue ipsum ut dolor. </p>
+        </article>
+        <hr>
+        <article class="articulo">
+            <h2 class="titulo">Titulo2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt varius rhoncus. Proin convallis, elit at pharetra consequat, sapien mauris egestas lacus, et eleifend diam nibh vitae ligula. Sed vulputate venenatis enim sed ultricies. Sed fringilla, purus ut fringilla efficitur, erat est mattis diam, et venenatis augue ipsum ut dolor. </p>
+        </article>
+        <p class="sonrisa" id="circle">Lorem ipsum dolor sit amet</p>
+    </div>
+    <script refer>
+        circle = document.getElementById("circle")
+        circlearray = circle.textContent.split('')
+        circle.textContent = ''
+        for(var i = 0; i< circlearray.length; i++){
+            circle.innerHTML += '<span style="transform:rotate('+((i+13)*7)+'deg)">'+ circlearray[i]+'</span>'
+        }
+      </script>
+</body>
+</html>
